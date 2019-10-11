@@ -6,7 +6,6 @@ import time
 def items():
 	k = requests.get('https://api.telegram.org/bot<token>/getUpdates')
 	text_message = ((k.json())['result'][-1]['message']['text'])
-	print(text_message)
 	chat_id = ((k.json())['result'][-1]['message']['chat']['id'])
 	return text_message, chat_id
 
